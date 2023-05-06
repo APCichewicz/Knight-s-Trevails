@@ -23,12 +23,12 @@ function App() {
     // if first click is null, set first click to i
     if (firstClick === null) {
       setFirstClick(i)
-      document.getElementById(i.toString())?.classList.add('bg-red-500')
+      document.getElementById(i.toString())?.classList.add('border-red-500', 'border-4')
 
     } else {
       // if second click is null, set second click to i
       setSecondClick(i)
-      document.getElementById(i.toString())?.classList.add('bg-green-500')
+      document.getElementById(i.toString())?.classList.add('border-green-500', 'border-4')
     }
   }
   // function to handle the reset
@@ -38,8 +38,8 @@ function App() {
     setSecondClick(null)
     // reset the color of the squares
     for (let i = 0; i < 64; i++) {
-      document.getElementById(i.toString())?.classList.remove('bg-red-500')
-      document.getElementById(i.toString())?.classList.remove('bg-green-500')
+      document.getElementById(i.toString())?.classList.remove('border-red-500', 'border-4')
+      document.getElementById(i.toString())?.classList.remove('border-green-500', 'border-4')
     }
   }
   const legalMoves = (row:number, col:number): number[][]   => {
