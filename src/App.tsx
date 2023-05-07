@@ -1,6 +1,4 @@
-import { MouseEventHandler, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -123,7 +121,7 @@ function App() {
       // add the row and col to the result
       result.push([row, col])
       // set the row and col to the previous row and col
-      const temp = path.get(`${row},${col}`)
+      const temp = path.get(`${row},${col}`)!
       row = temp[0]
       col = temp[1]
     }
